@@ -1,92 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pepper Script Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pepper Script Hub</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #050816, #0b1025);
-      color: white;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background-image:
-        radial-gradient(circle at top, rgba(128,0,255,0.3), transparent 50%);
-    }
+body{
+    background:#080811;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 8px 18px;
-      border: 2px solid #8a2be2;
-      border-radius: 20px;
-      color: #c084fc;
-      margin-bottom: 20px;
-    }
+/* Stars Background */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:90px 90px;
+    opacity:.15;
+    pointer-events:none;
+}
 
-    h1 {
-      font-size: 48px;
-      margin: 0;
-    }
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
 
-    .subtitle {
-      color: #b0b0b0;
-      margin-top: 10px;
-    }
+.badge{
+    width:max-content;
+    margin:auto;
+    padding:8px 18px;
+    border:1px solid #7c3aed;
+    border-radius:50px;
+    color:#b388ff;
+    font-size:12px;
+    font-weight:600;
+}
 
-    .card {
-      max-width: 400px;
-      margin: 40px auto;
-      background: #12172d;
-      border-radius: 20px;
-      overflow: hidden;
-    }
+h1{
+    text-align:center;
+    margin-top:20px;
+    font-size:70px;
+    font-weight:800;
+}
 
-    .card img {
-      width: 100%;
-      display: block;
-    }
+.highlight{
+    color:#b388ff;
+}
 
-    .content {
-      padding: 20px;
-    }
+.subtitle{
+    text-align:center;
+    color:#999;
+    margin-top:12px;
+    margin-bottom:60px;
+}
 
-    .button {
-      display: block;
-      text-align: center;
-      background: #7c3aed;
-      color: white;
-      text-decoration: none;
-      padding: 15px;
-      border-radius: 12px;
-      margin-top: 20px;
-      font-weight: bold;
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:330px;
+    background:#11111c;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 40px rgba(124,58,237,.35);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.simulator{
+    background:rgba(0,255,200,.12);
+    color:#28e7c8;
+}
+
+.mystery{
+    background:rgba(130,90,255,.15);
+    color:#b388ff;
+}
+
+.tycoon{
+    background:rgba(255,70,100,.15);
+    color:#ff6a88;
+}
+
+.card h3{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#9d9d9d;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    padding:14px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.green{
+    background:linear-gradient(90deg,#12b87f,#26d8bd);
+}
+
+.purple{
+    background:linear-gradient(90deg,#702eff,#c05cff);
+}
+
+.red{
+    background:linear-gradient(90deg,#d9174f,#ff5f7d);
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    margin-top:60px;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    h1{
+        font-size:48px;
     }
-  </style>
+}
+</style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="badge">ROBLOX SCRIPT HUB</div>
-    <h1>Pepper Script Hub</h1>
-    <p class="subtitle">
-      Select a game to get the script — copy with one click.
-    </p>
-  </div>
+<div class="container">
 
-  <div class="card">
-    <img src="your-image.png" alt="Grow A Garden 2">
-    <div class="content">
-      <h2>Grow A Garden 2</h2>
-      <p>Auto farm, auto collect, and more features.</p>
-      <a class="button" href="#">Get Script</a>
+<div class="badge">ROBLOX SCRIPT HUB</div>
+
+<h1>Pepper <span class="highlight">Script Hub</span></h1>
+
+<p class="subtitle">
+Select a game to get the script — copy with one click.
+</p>
+
+<div class="cards">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <img src="roblox-grow-a-garden-2-codes-a9a142e.jpg" alt="Grow A Garden 2">
+
+        <div class="content">
+            <span class="tag simulator">SIMULATOR</span>
+
+            <h3>Grow A Garden 2</h3>
+
+            <p>
+                Auto farm, auto collect, and more powerful features.
+            </p>
+
+            <a href="script.html" class="btn green">
+                Get Script
+            </a>
+        </div>
     </div>
-  </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img src="mm2.jpg" alt="Murder Mystery 2">
+
+        <div class="content">
+            <span class="tag mystery">MYSTERY</span>
+
+            <h3>Murder Mystery 2</h3>
+
+            <p>
+                ESP, visual utilities and gameplay helper features.
+            </p>
+
+            <a href="mm2.html" class="btn purple">
+                Get Script
+            </a>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img src="brainrot.jpg" alt="Steal A Brainrot">
+
+        <div class="content">
+            <span class="tag tycoon">TYCOON</span>
+
+            <h3>Steal A Brainrot</h3>
+
+            <p>
+                Automation and progression helper features.
+            </p>
+
+            <a href="brainrot.html" class="btn red">
+                Get Script
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Made by Pepper Script Hub
+</div>
+
+</div>
 
 </body>
 </html>

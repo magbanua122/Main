@@ -1,98 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pepper Script Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pepper Script Hub</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #050816, #0b1025);
+      color: white;
+    }
 
-body{
-    background:#0b1020;
-    color:white;
-    padding:20px;
-}
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-image:
+        radial-gradient(circle at top, rgba(128,0,255,0.3), transparent 50%);
+    }
 
-h1{
-    text-align:center;
-    margin:30px 0;
-    font-size:40px;
-}
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 2px solid #8a2be2;
+      border-radius: 20px;
+      color: #c084fc;
+      margin-bottom: 20px;
+    }
 
-.card{
-    max-width:400px;
-    margin:20px auto;
-    background:#151d30;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 15px rgba(0,0,0,.5);
-}
+    h1 {
+      font-size: 48px;
+      margin: 0;
+    }
 
-.card img{
-    width:100%;
-    display:block;
-}
+    .subtitle {
+      color: #b0b0b0;
+      margin-top: 10px;
+    }
 
-.content{
-    padding:20px;
-}
+    .card {
+      max-width: 400px;
+      margin: 40px auto;
+      background: #12172d;
+      border-radius: 20px;
+      overflow: hidden;
+    }
 
-.tag{
-    display:inline-block;
-    background:#1a3a4a;
-    color:#5df0d2;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:12px;
-}
+    .card img {
+      width: 100%;
+      display: block;
+    }
 
-.content h2{
-    margin:15px 0;
-}
+    .content {
+      padding: 20px;
+    }
 
-.content p{
-    color:#bdbdbd;
-    line-height:1.5;
-}
-
-.button{
-    display:block;
-    text-align:center;
-    background:#19d3a2;
-    color:white;
-    text-decoration:none;
-    padding:15px;
-    border-radius:12px;
-    margin-top:20px;
-    font-weight:bold;
-}
-</style>
+    .button {
+      display: block;
+      text-align: center;
+      background: #7c3aed;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-<h1>My Script Hub</h1>
+  <div class="hero">
+    <div class="badge">ROBLOX SCRIPT HUB</div>
+    <h1>Pepper Script Hub</h1>
+    <p class="subtitle">
+      Select a game to get the script — copy with one click.
+    </p>
+  </div>
 
-<div class="card">
-    <img src="https://picsum.photos/400/200" alt="Game">
-
+  <div class="card">
+    <img src="your-image.png" alt="Grow A Garden 2">
     <div class="content">
-        <span class="tag">SIMULATOR</span>
-
-        <h2>Grow A Garden 2</h2>
-
-        <p>
-            Auto farm, auto collect and many more features.
-        </p>
-
-        <a class="button" href="script.html">Get Script</a>
+      <h2>Grow A Garden 2</h2>
+      <p>Auto farm, auto collect, and more features.</p>
+      <a class="button" href="#">Get Script</a>
     </div>
-</div>
+  </div>
 
 </body>
 </html>

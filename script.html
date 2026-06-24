@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Script</title>
+
+<style>
+body{
+    background:#0b1020;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    padding:30px;
+}
+
+textarea{
+    width:90%;
+    height:200px;
+    background:#151d30;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#19d3a2;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<h1>Grow A Garden 2 Script</h1>
+
+<textarea id="script" readonly>loadstring(game:HttpGet("https://cdn.sourceb.in/bins/8nJQ3XQ749/0"))()</textarea>
+
+<br>
+
+<button onclick="copyScript()">Copy Script</button>
+
+<script>
+function copyScript() {
+    const script = document.getElementById("script");
+    navigator.clipboard.writeText(script.value);
+    alert("Script copied!");
+}
+</script>
+
+</body>
+</html>
